@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificar género</title>
+</head>
+<body>
+
+<h2>Verificar género</h2>
+
+<div>
+    <label for="genero">Ingrese su género ('m' para hombre, 'f' para mujer):</label>
+    <input type="text" id="genero">
+    <button onclick="verificarGenero()">Verificar</button>
+</div>
+
+<div>
+    <h3>Resultado:</h3>
+    <p id="resultado"></p>
+</div>
+
+<script>
+    function verificarGenero() {
+        
+        let genero = document.getElementById("genero").value.toLowerCase();
+        
+       
+        if (genero === 'm') {
+            document.getElementById("resultado").textContent = "Usted es hombre.";
+        } else if (genero === 'f') {
+            document.getElementById("resultado").textContent = "Usted es mujer.";
+        } else {
+            document.getElementById("resultado").textContent = "Por favor, ingrese 'm' o 'f'.";
+        }
+    }
+</script>
+
+</body>
+</html>
